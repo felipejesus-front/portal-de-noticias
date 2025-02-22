@@ -5,6 +5,13 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
 .title-destaque-descricao a {
   text-decoration: none;
   color: white;
@@ -86,6 +93,8 @@ header {
 
 section.noticia-destaque {
   padding: 40px 0;
+  flex: 1;
+  
 }
 
 section.noticia-destaque > .center {
@@ -323,6 +332,59 @@ section.noticia {
   font-size: 33px;
   margin: 10px 0;
 }
+
+.center.center-form{
+  justify-content: center;
+  height: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 1.5rem;
+}
+
+.login-form label{
+  font-size: 20px;
+  color: rgb(44, 44, 44);
+  font-weight: 700;
+
+}
+
+.login-form input {
+  height: 40px;
+  width: 100%;
+  border:  2px solid rgb(44, 44, 44); ;
+  font-size: 20px;
+  color: rgb(44, 44, 44);
+  background-color: #ffffff;
+  padding: 5px 10;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.login-form input[type=submit] {
+  margin-top: 30px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:rgb(44, 44, 44);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color:rgb(44, 44, 44);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color:rgb(44, 44, 44);
+}
+
 
 @media screen and (max-width: 960px) {
   .noticia-single {
