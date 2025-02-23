@@ -333,9 +333,21 @@ section.noticia {
   margin: 10px 0;
 }
 
-.center.center-form{
+.center.center-form {
   justify-content: center;
   height: 100%;
+}
+
+.center.center-form:has(> h2) {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.center.center-form:has(> h2) textarea {
+min-height: 300px;
+resize: vertical;
 }
 
 .login-form {
@@ -353,7 +365,7 @@ section.noticia {
 
 }
 
-.login-form input {
+.login-form input, .login-form textarea {
   height: 40px;
   width: 100%;
   border:  2px solid rgb(44, 44, 44); ;

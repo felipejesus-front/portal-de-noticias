@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Admin Panel</title>
-	</head>
-	<body>
-		<h1>Logged in</h1>
-	</body>
-</html>
+<%- include('partials/header.html') %>
+<section class="noticia-destaque">
+	<div class="center center-form">
+		<h2>Cadastro de Notícias</h2>
+		<form class="login-form" method="post" action="/admin/create-news">
+			<input
+				type="text"
+				name="titulo_noticia"
+				id="titulo_noticia"
+				placeholder="Titulo da notícia"
+			/>
+			<input
+				type="text"
+				name="url_imagem"
+				id="url_imagem"
+				placeholder="Link da imagem da notícia"
+			/>
+			<textarea
+				name="noticia"
+				id="noticia"
+				cols="30"
+				placeholder="Escreva sua notícia aqui"
+			></textarea>
+
+			<input type="submit" value="Cadastrar" name="action" />
+		</form>
+	</div>
+</section>
+<%- include('partials/footer.html') %>
