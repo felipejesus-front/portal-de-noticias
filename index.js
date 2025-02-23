@@ -153,9 +153,13 @@ app.get("/admin/login", (req, res) => {
 	if (req.session.email == null) {
 		res.render("admin-login");
 	} else {
-		console.log(req.session.email);
 		res.render("admin-panel");
 	}
+});
+
+app.post("/admin/create-news", (req, res) => {
+	//next step, create at the mongo
+	res.send("cadastrado com sucesso.");
 });
 
 app.listen(3000, () => {
