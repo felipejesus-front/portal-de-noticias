@@ -303,7 +303,7 @@ section.noticia {
 }
 
 .noticia-single {
-  padding: 20px;
+  padding: 20px 50px;
   background-color: white;
   border-radius: 10px;
   width: 58%;
@@ -411,6 +411,11 @@ resize: vertical;
 display: flex;
 justify-content: space-between;
 padding: 20px 0;
+}
+
+.ck-editor__editable {
+  min-height: 300px;
+  resize: vertical;
 }
 
 

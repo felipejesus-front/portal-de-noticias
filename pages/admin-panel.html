@@ -15,6 +15,12 @@
 				id="url_imagem"
 				placeholder="Link da imagem da notícia"
 			/>
+			<input
+				type="text"
+				name="slug"
+				id="slug"
+				placeholder="digite-o-link-da-sua-noticia-nesse-formato"
+			/>
 			<textarea
 				name="noticia"
 				id="noticia"
@@ -34,3 +40,15 @@
 	</div>
 </section>
 <%- include('partials/footer.html') %>
+<script>
+	ClassicEditor.create(document.querySelector("#noticia"), {
+		// Configure a toolbar com os botões desejados
+		toolbar: ["undo", "redo", "bold", "italic", "link"],
+	})
+		.then((editor) => {
+			editor.ui.view.editable.element.style.height = "300px";
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+</script>
