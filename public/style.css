@@ -94,6 +94,9 @@ header {
 section.noticia-destaque {
   padding: 40px 0;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   
 }
 
@@ -336,6 +339,13 @@ section.noticia {
 .center.center-form {
   justify-content: center;
   height: 100%;
+  width: 100%;
+  border-bottom: #303336 dashed;
+  padding-bottom: 60px;
+}
+
+.center.center-form:last-child{
+  border-bottom: none;
 }
 
 .center.center-form:has(> h2) {
@@ -395,6 +405,12 @@ resize: vertical;
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color:rgb(44, 44, 44);
+}
+
+.single-news{
+display: flex;
+justify-content: space-between;
+padding: 20px 0;
 }
 
 
