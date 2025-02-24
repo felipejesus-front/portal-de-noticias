@@ -159,6 +159,17 @@ app.get("/admin/login", (req, res) => {
 
 app.post("/admin/create-news", (req, res) => {
 	//next step, create at the mongo
+	console.log(req.body);
+	const newsObject = req.body;
+	Posts.create({
+		titulo: newsObject.titulo_noticia,
+		imagem: newsObject.url_imagem,
+		categoria: "notícia",
+		conteudo: newsObject.noticia,
+		slug: newsObject.slug,
+		autor: "admin",
+		views: 0,
+	});
 	res.send("cadastrado com sucesso.");
 });
 
