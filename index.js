@@ -162,6 +162,10 @@ app.post("/admin/create-news", (req, res) => {
 	res.send("cadastrado com sucesso.");
 });
 
+app.get("/admin/delete/:id", (req, res) => {
+	res.send("Deletando a notícia com ID: " + req.params.id);
+});
+
 app.listen(3000, () => {
 	console.log("Server Rodando...");
 });
